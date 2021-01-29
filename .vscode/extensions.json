@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "octref.vetur",
+    "thisismanta.stylus-supremacy",
+    "kumar-harsh.graphql-for-vscode"
+  ]
+}

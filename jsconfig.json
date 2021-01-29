@@ -1,0 +1,13 @@
+{
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "!!assets-loader!@images/*": ["src/assets/images/*"]
+    }
+  },
+  "exclude": [".cache", "node_modules", "dist", "./src/.temp"]
+}
