@@ -1,6 +1,6 @@
 # Gridsome Basic Tmeplate (for myself)
 
-> My basic template for getting started with [Gridsome](https://gridsome.org/).<br>
+> My basic template for getting started with [Gridsome](https://gridsome.org/){:target="_blank" rel="noopener"}.<br>
 > (changed starter-default as a base.)
 
 ## Install and Start
@@ -23,7 +23,7 @@
 
 1. pug, stylus は使えるようにしてます。
 
-2. [ress (modern reset css)](https://github.com/filipelinhares/ress) でブラウザ CSS をリセットさせてます。（気に入らなかったら、別の入れてください）
+2. [ress (modern reset css)](https://github.com/filipelinhares/ress){:target="_blank" rel="noopener"} でブラウザ CSS をリセットさせてます。（気に入らなかったら、別の入れてください）
 
 3. prettier, eslint もある程度設定しているので、お好きに変更してください。<br>
    VSCode使用する前提で`.vscode`も置いてあります。
