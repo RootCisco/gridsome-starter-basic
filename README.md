@@ -1,14 +1,18 @@
-# Default starter for Gridsome
+# Gridsome Starter Basic (for myself)
 
-This is the project you get when you run `gridsome create new-project`.
+> My basic template for getting started with [Gridsome](https://gridsome.org/).
 
-### 1. Install Gridsome CLI tool if you don't have
+## Instal
 
-`npm install --global @gridsome/cli`
+1. Gridsome CLI tool を持ってなかったら。グローバルインストールしておく。
 
-### 2. Create a Gridsome project
+        $ npm i -g @gridsome/cli
+        OR
+        $ yarn global add @gridsome/cli
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+2. このプロジェクトを`gridsome create`コマンドでインストールして始める。
+    1. `gridsome create {my_project_name} RootCisco/gridsome-starter-basic`
+    2. `cd {my_project_name}`
+    3. `yarn dev` start local development server to `http://localhost:3000`
+    4. `yarn build` generate files in `dist/` folder
+    5. Happy coding 🎉🙌
