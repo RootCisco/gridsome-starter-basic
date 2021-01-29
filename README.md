@@ -1,4 +1,4 @@
-# Gridsome Starter Basic (for myself)
+# Gridsome Basic Tmeplate (for myself)
 
 > My basic template for getting started with [Gridsome](https://gridsome.org/).<br>
 > (changed starter-default as a base.)
@@ -13,7 +13,7 @@
 
 ### 2. このプロジェクトを`gridsome create`コマンドでインストールして始める
 
-1. `gridsome create {my_project_name} RootCisco/gridsome-starter-basic`
+1. `gridsome create {my_project_name} RootCisco/gridsome-basic-template`
 2. `cd {my_project_name}`
 3. `yarn dev` start local development server to `http://localhost:3000`
 4. `yarn build` generate files in `dist/` folder
