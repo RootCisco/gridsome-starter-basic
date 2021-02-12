@@ -30,7 +30,21 @@ module.exports = {
       precomposed: true
     }
   },
-  plugins: [{ use: 'gridsome-plugin-pug' }],
+  plugins: [
+    { use: 'gridsome-plugin-pug' },
+    {
+      use: 'gridsome-plugin-svg',
+      options: {
+        svgo: [
+          { removeUselessDefs: true },
+          { removeAttrs: { attrs: ['fill', 'id', 'class', 'data-name'] } },
+          { removeStyleElement: true },
+          { convertPathData: true },
+          { convertTransform: true }
+        ]
+      }
+    }
+  ],
   css: {
     loaderOptions: {
       postcss: {

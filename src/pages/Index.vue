@@ -11,13 +11,21 @@ Layout
   p.home-links
     a(href='https://gridsome.org/docs/', target='_blank', rel='noopener') Gridsome Docs
     a(href='https://github.com/gridsome/gridsome', target='_blank', rel='noopener') GitHub
+
+  .svg-test
+    Fb
 </template>
 
 <script>
+import Fb from '@/assets/svg/facebook.svg';
+
 export default {
   metaInfo: {
     title: 'Hello, world!',
-    titleTemplate: '%s'
+    titleTemplate: ''
+  },
+  components: {
+    Fb
   }
 };
 </script>
@@ -28,4 +36,7 @@ export default {
 
 .home-links a
   margin-right: 1rem
+
+.svg-test
+  width: 100px
 </style>

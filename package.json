@@ -17,10 +17,16 @@
     "eslint-plugin-gridsome": "^1.6.1",
     "eslint-plugin-vue": "^7.5.0",
     "gridsome-plugin-pug": "^0.0.3",
+    "gridsome-plugin-svg": "^0.0.14",
     "prettier": "^2.2.1",
     "pug": "^3.0.0",
     "style-resources-loader": "^1.4.1",
     "stylus": "^0.54.8",
     "stylus-loader": "3.0.2"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "android >= 4.4",
+    "not ie 11"
+  ]
 }
