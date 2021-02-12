@@ -17,6 +17,19 @@ fz_vh($font_size = 10, $view = 812)
   font-size: $font_size * 1px
   font-size: get_vh($font_size, $view)
 
+// hover
+hover()
+  @media (hover: hover), (-ms-high-contrast: none)
+    &:hover
+      {block}
+
+// target selector hover
+hover($target)
+  @media (hover: hover), (-ms-high-contrast: none)
+    {$target}
+      &:hover
+        {block}
+
 // breakpoint
 breakpoint(targets)
   $conditions = ()
