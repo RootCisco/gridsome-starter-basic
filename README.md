@@ -13,7 +13,7 @@
 
 ### 2. このプロジェクトを`gridsome create`コマンドでインストールして始める
 
-1. `gridsome create {my_project_name} ciscoxas/gridsome-basic-template`
+1. `gridsome create {my_project_name} cixocs/gridsome-basic-template`
 2. `cd {my_project_name}`
 3. `yarn dev` start local development server to `http://localhost:3000`
 4. `yarn build` generate files in `dist/` folder
