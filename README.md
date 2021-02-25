@@ -16,7 +16,7 @@ My basic template for getting started with [Gridsome](https://gridsome.org/).<br
 
 ## Install and Start
 
-### 1. Gridsome CLI tool を持ってなかったら。グローバルインストールしておく
+### 1. Gridsome CLI tool を持ってなかったら、グローバルインストールしておく
 
     $ npm i -g @gridsome/cli
     OR
