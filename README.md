@@ -3,7 +3,7 @@
 My basic template for getting started with [Gridsome](https://gridsome.org/).<br>
 (changed starter-default as a base.)
 
-Gridsome version v0.7.x
+*Gridsome version v0.7.x*
 
 ## Prerequisites
 
