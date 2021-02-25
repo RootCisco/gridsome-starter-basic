@@ -1,9 +1,9 @@
 # Gridsome Basic Tmeplate (for myself)
 
-> My basic template for getting started with [Gridsome](https://gridsome.org/).<br>
-> (changed starter-default as a base.)
->
-> Gridsome version v0.7.x
+My basic template for getting started with [Gridsome](https://gridsome.org/).<br>
+(changed starter-default as a base.)
+
+Gridsome version v0.7.x
 
 ## Prerequisites
 
