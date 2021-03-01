@@ -16,7 +16,12 @@
       "jsx": true
     }
   },
-  "extends": ["eslint:recommended", "plugin:vue/recommended", "plugin:gridsome/recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "plugin:gridsome/recommended",
+    "prettier"
+  ],
   "plugins": ["vue", "gridsome"],
   "rules": {
     "vue/max-attributes-per-line": "off",
