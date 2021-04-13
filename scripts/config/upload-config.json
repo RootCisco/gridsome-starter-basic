@@ -1,0 +1,9 @@
+{
+  "sftpOtopns": {
+    "host": "",
+    "username": "",
+    "password": "",
+    "path": "./dist",
+    "remoteDir": "/public_html"
+  }
+}

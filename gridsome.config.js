@@ -3,14 +3,17 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const env = process.env.BUILD_ENV || 'prod';
+const buildConfig = require('./build.config');
+
 const path = require('path');
 
 module.exports = {
   siteName: 'Gridsome',
   siteDescription: 'Smaple Description',
-  siteUrl: 'http://example.com/',
-  titleTemplate: '%s | Gridsome',
-  pathPrefix: '',
+  siteUrl: buildConfig[env].siteUrl,
+  titleTemplate: '',
+  pathPrefix: buildConfig[env].pathPrefix,
   port: 3000,
   metadata: {
     ogBase: {
