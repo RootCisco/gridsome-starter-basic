@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.23.0",
+    "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-gridsome": "^1.6.2",
-    "eslint-plugin-vue": "^7.8.0",
+    "eslint-plugin-vue": "^7.9.0",
     "gridsome-plugin-pug": "^0.0.3",
     "gridsome-plugin-svg": "^0.0.14",
     "prettier": "^2.2.1",
