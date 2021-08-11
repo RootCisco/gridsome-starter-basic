@@ -11,9 +11,6 @@ Layout
   p.home-links
     a(href='https://gridsome.org/docs/', target='_blank', rel='noopener') Gridsome Docs
     a(href='https://github.com/gridsome/gridsome', target='_blank', rel='noopener') GitHub
-
-  .svg-test
-    SvgElement(name='facebook')
 </template>
 
 <script>
@@ -28,7 +25,4 @@ export default {
 
 .home-links a
   margin-right: 1rem
-
-.svg-test
-  width: 100px
 </style>

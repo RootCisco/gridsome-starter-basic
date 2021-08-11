@@ -5,9 +5,8 @@
     "paths": {
       "~/*": ["src/*"],
       "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "!!assets-loader!@images/*": ["src/assets/images/*"]
+      "@components/*": ["src/components/*"]
     }
   },
-  "exclude": [".cache", "node_modules", "dist", "./src/.temp"]
+  "exclude": [".cache", "dist", "node_modules", "./src/.temp"]
 }
