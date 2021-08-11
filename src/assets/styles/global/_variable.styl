@@ -13,9 +13,14 @@ $color-white = #fff
 $color-black = #000
 // media
 $media-queries = {
-  sp-mini: 'only screen and (max-width: 359px)',
-  tablet: 'only screen and (min-width: 520px)',
-  pc: 'only screen and (min-width: 960px)'
+  mob: '(max-width: 834px)',
+  tab: '(min-width: 520px) and (max-width: 834px)',
+  pc: '(min-width: 835px) and (max-width: 1440px)',
+  xs: '(max-width: 359px)',
+  sm: '(max-width: 519px)',
+  md: '(min-width: 835px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1441px)'
 }
 // easing
 $ease-in-quad = cubic-bezier(0.55, 0.085, 0.68, 0.53)

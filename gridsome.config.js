@@ -7,21 +7,16 @@ const env = process.env.BUILD_ENV || 'prod';
 const buildConfig = require('./build.config');
 
 const path = require('path');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozJpeg = require('imagemin-mozjpeg');
 
 module.exports = {
-  siteName: 'Gridsome',
-  siteDescription: 'Smaple Description',
+  siteName: 'site name',
+  siteDescription: 'site description',
   siteUrl: buildConfig[env].siteUrl,
-  titleTemplate: '',
+  titleTemplate: '%s',
   pathPrefix: buildConfig[env].pathPrefix,
   port: 3000,
-  metadata: {
-    ogBase: {
-      locale: 'ja_JP',
-      type: 'website',
-      image: 'og.png'
-    }
-  },
   icon: {
     favicon: {
       src: './src/favicon.png',
@@ -38,8 +33,10 @@ module.exports = {
     {
       use: 'gridsome-plugin-svg',
       options: {
+        goesBothWays: true,
         svgo: [
           { removeUselessDefs: true },
+          { removeDimensions: true },
           { removeAttrs: { attrs: ['fill', 'id', 'class', 'data-name'] } },
           { removeStyleElement: true },
           { convertPathData: true },
@@ -70,10 +67,21 @@ module.exports = {
     }
   },
   chainWebpack(config) {
+    // resources styles
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
     types.forEach((type) => {
       addStyleResources(config.module.rule('stylus').oneOf(type));
     });
+
+    // imagemin
+    config.plugin('ImageminPlugin').use(ImageminPlugin, [
+      {
+        test: /\.(jpg|png|gif)$/i,
+        disable: env === 'local',
+        pngquant: { quality: '75' },
+        plugins: [ImageminMozJpeg({ quality: 75, progressive: true })]
+      }
+    ]);
   }
 };
 
@@ -85,8 +93,7 @@ function addStyleResources(rule) {
     .options({
       patterns: [
         // global styl (variables, mixin, palette...etc)
-        path.resolve(__dirname, './src/assets/styles/global.styl'),
-        path.resolve(__dirname, './src/assets/styles/index.styl')
+        path.resolve(__dirname, './src/assets/styles/global/*.styl')
       ]
     });
 }

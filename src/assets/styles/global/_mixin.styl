@@ -1,0 +1,59 @@
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+vw($size, $viewport = 375)
+  $rate = (100 / $viewport)
+  return $rate * $size * 1vw
+
+vh($size, $viewport = 812)
+  $rate = (100 / $viewport)
+  return $rate * $size * 1vh
+
+vw_pc($size)
+  return vw($size, 1440)
+
+vh_pc($size)
+  return vh($size, 960)
+
+// font-size vw
+fz_vw($font-size = 10, $view = 375)
+  font-size: $font-size * 1px
+  font-size: vw($font-size, $view)
+
+// font-size vh
+fz_vh($font-size = 10, $view = 812)
+  font-size: $font-size * 1px
+  font-size: vh($font-size, $view)
+
+fz_vw_pc($font-size = 10)
+  fz_vw($font-size, 1440)
+
+fz_vh_pc($font-size = 10)
+  fz_vh($font-size, 1440)
+
+// background webp
+bg_webp($path)
+  &.webp
+    $webp = replace(png, webp, $path)
+    background-image: url('~@images/' + $webp)
+    background-repeat: no-repeat
+
+  &.nowebp
+    background-image: url('~@images/' + $path)
+    background-repeat: no-repeat
+
+// hover
+hover()
+  @media (hover: hover), (-ms-high-contrast: none)
+    &:hover
+      {block}
+
+// breakpoint
+breakpoint(targets)
+  $conditions = ()
+
+  for target in targets
+    push($conditions, $media-queries[target])
+
+  $condition = join(', ', $conditions)
+
+  @media $condition
+    {block}

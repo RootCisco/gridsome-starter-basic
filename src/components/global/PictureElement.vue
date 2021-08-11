@@ -1,26 +1,34 @@
 <template lang="pug">
 picture
   template(v-if='media')
-    source(type='image/webp', :srcset='require(`@images/${filename}-pc.webp`)', :media='mediaString')
-    source(:srcset='require(`@images/${filename}-pc.${extention}`)', :media='mediaString')
+    source(type='image/webp', :srcset='require(`@images/${filename}_pc.webp`)', :media='mediaString')
+    source(:srcset='require(`@images/${filename}_pc.${extention}`)', :media='mediaString')
   source(type='image/webp', :srcset='require(`@images/${filename}.webp`)')
-  img(:src='require(`@images/${imagePath}`)', :alt='alt', :loading='loading', :decoding='decodingAsync')
+  img(:src='require(`@images/${path}`)', :alt='alt', :loading='loading', :decoding='decodingAsync', :width='width', :height='height')
 </template>
 
 <script>
 export default {
   props: {
-    imagePath: {
+    path: {
       type: String,
       default: 'test.jpg'
     },
     alt: {
       type: String,
-      default: 'text'
+      default: ''
     },
     loading: {
       type: [Boolean, String],
       default: 'lazy'
+    },
+    width: {
+      type: Number,
+      default: null
+    },
+    height: {
+      type: Number,
+      default: null
     },
     media: {
       type: [Boolean, String],
@@ -31,16 +39,12 @@ export default {
     return {
       filename: '',
       extention: '',
-      mediaString: '(min-width: 834px)'
+      decodingAsync: this.loading ? false : 'async',
+      mediaString: '(min-width: 835px)'
     };
   },
-  computed: {
-    decodingAsync() {
-      return this.loading ? false : 'async';
-    }
-  },
   created() {
-    const splitPath = this.imagePath.split('.');
+    const splitPath = this.path.split('.');
     this.filename = splitPath[0];
     this.extention = splitPath[1];
   }

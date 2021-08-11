@@ -4,15 +4,15 @@ module.exports = {
     pathPrefix: '/'
   },
   dev: {
-    siteUrl: 'https://delonghi-pump.dev.aid-dcc.jp',
-    pathPrefix: '/campaign/espresso2q21'
+    siteUrl: 'https://example.com',
+    pathPrefix: '/'
   },
   stg: {
-    siteUrl: 'http://barista2019.3rec-test.com',
-    pathPrefix: '/campaign/espresso2q21'
+    siteUrl: 'https://example.com',
+    pathPrefix: '/'
   },
   prod: {
-    siteUrl: 'https://barista.delonghi.co.jp',
-    pathPrefix: '/campaign/espresso2q21'
+    siteUrl: 'https://example.com',
+    pathPrefix: '/'
   }
 };

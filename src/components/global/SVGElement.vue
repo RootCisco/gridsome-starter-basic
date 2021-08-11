@@ -12,7 +12,7 @@ export default {
   },
   computed: {
     icon: function () {
-      const target = require(`~/assets/svg/${this.name}.svg`);
+      const target = require(`~/assets/svg/${this.name}.svg?inline`);
       return target;
     }
   }

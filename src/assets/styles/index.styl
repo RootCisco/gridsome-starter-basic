@@ -19,7 +19,8 @@ html
     display: none
     -webkit-appearance: none
 
-  -webkit-overflow-scrolling: touch
+  // -webkit-overflow-scrolling: touch
+  fz_vw(10)
 
 body
   -webkit-text-size-adjust: 100%
@@ -35,7 +36,8 @@ body
 
 h1, h2, h3, p, a, em
   font-feature-settings: 'palt'
-  font-display: swap
+
+  // font-display: swap
 
   // IE ぼやけ対応
   _:-ms-lang(x)
@@ -45,12 +47,15 @@ a
   color: $base-font-color
   text-decoration: none
 
-em
+em, address
   font-style: normal
 
 ul, ol
   li
     list-style: none
+
+picture
+  display: block
 
 img
   width: 100%
@@ -65,11 +70,27 @@ svg
 .br-pc
   display: inline-block
 
-  +breakpoint(pc)
-    display: none
-
 .br-sp
   display: none
 
-  +breakpoint(pc)
-    display: inline-block
+.hidden
+  display: none
+
+.invisible
+  visibility: hidden
+
+.flex
+  display: flex
+
+.grid
+  display: grid
+
++breakpoint(md)
+  html
+    fz_vw_pc(10)
+
+  .br-pc
+    display: block
+
+  .br-sp
+    display: none

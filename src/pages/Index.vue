@@ -13,20 +13,12 @@ Layout
     a(href='https://github.com/gridsome/gridsome', target='_blank', rel='noopener') GitHub
 
   .svg-test
-    Fb
+    SvgElement(name='facebook')
 </template>
 
 <script>
-import Fb from '@/assets/svg/facebook.svg';
-
 export default {
-  metaInfo: {
-    title: 'Hello, world!',
-    titleTemplate: ''
-  },
-  components: {
-    Fb
-  }
+  components: {}
 };
 </script>
 

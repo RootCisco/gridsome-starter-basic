@@ -13,9 +13,21 @@
 query {
   metadata {
     siteName
+    siteDescription
+    siteUrl
   }
 }
 </static-query>
+
+<script>
+export default {
+  metaInfo() {
+    return this.setMeta({
+      ...this.$static.metadata
+    });
+  }
+};
+</script>
 
 <style lang="stylus">
 body

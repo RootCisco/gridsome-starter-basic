@@ -2,34 +2,46 @@
   "name": "start-gridsome",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "dev": "gridsome develop",
-    "explore": "gridsome explore"
-  },
-  "dependencies": {
-    "gridsome": "^0.7.0",
-    "ress": "^3.0.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "del": "^6.0.0",
-    "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-gridsome": "^1.6.2",
-    "eslint-plugin-vue": "^7.9.0",
-    "gridsome-plugin-pug": "^0.0.3",
-    "gridsome-plugin-svg": "^0.0.14",
-    "ora": "^5.4.0",
-    "prettier": "^2.2.1",
-    "pug": "^3.0.2",
-    "sftp-upload": "^1.0.3",
-    "style-resources-loader": "^1.4.1",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^3.0.2"
+    "dev": "yarn webp && BUILD_ENV=local gridsome develop",
+    "build:dev": "yarn webp && BUILD_ENV=dev gridsome build && BUILD_ENV=dev yarn prepare_dist",
+    "build": "yarn webp && gridsome build && yarn prepare_dist",
+    "explore": "gridsome explore",
+    "webp": "node scripts/imagemin-webp.js",
+    "prepare_dist": "node scripts/prepare-dist.js"
   },
   "browserslist": [
     "defaults",
     "android >= 4.4",
     "not ie 11"
-  ]
+  ],
+  "dependencies": {
+    "body-scroll-lock": "^3.1.5",
+    "gridsome": "^0.7.23",
+    "gsap": "^3.7.1",
+    "ress": "^4.0.0",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "adm-zip": "^0.5.5",
+    "babel-eslint": "^10.1.0",
+    "dayjs": "^1.10.6",
+    "del": "^6.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-gridsome": "^1.6.2",
+    "eslint-plugin-vue": "^7.16.0",
+    "gridsome-plugin-pug": "^0.0.3",
+    "gridsome-plugin-svg": "^0.0.14",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "ora": "^5.4.1",
+    "prettier": "^2.3.2",
+    "pug": "^3.0.2",
+    "sftp-upload": "^1.0.3",
+    "style-resources-loader": "^1.4.1",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2"
+  }
 }
